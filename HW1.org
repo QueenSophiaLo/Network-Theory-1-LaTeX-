@@ -1,0 +1,132 @@
+#+TITLE: Homework Assignment #1
+#+DESCRIPTION: HW
+#+AUTHOR: Sophia Godfrey
+
+#+SETUPFILE: ~/Documents/org/standard.org
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [letterpaper, 12pt]
+#+OPTIONS: toc:nil
+
+1.2.1 - Use appropriate multiple and submultiple prefixes to express the following quantities: \\
+(a) 3,620 watts (W) \\
+(b) 0.000004 amps (A) \\
+(c) 5.2 x 10^{-6} ohms (\Omega) \\
+(d) 3.9 x 10^11 volts (V) \\
+(e) 0.02 meters (m) \\
+(f) 32 x 10^5 volts (V) \\
+
+1.2.2 - Use appropriate and submultiple prefixes to express the following quantities: \\
+(a) 4.71 x 10^{-8} seconds (s) \\
+(b) 10.3 x 10^8 watts (W) \\
+(c) 0.00000000321 amps (A) \\
+(d) 0.1 meters (m) \\
+(e) 8,760,000 volts (V) \\
+(f) 3.16 x 10^{-16} hertz (Hz) \\
+
+1.2.3 - Convert: \\
+(a) 16.3 m to mm \\
+(b) 16.3 m to km \\
+(c) 4 x 10^{-6} (\mu F) (microfarad) to pF (picofarad) \\
+(d) 2.3 ns to (\mu s) \\
+(e) 3.6 x 10^7V to MV \\
+(f) 0.03 mA (milliamp) to (\mu A) \\
+
+1.2.4 - Convert: \\
+(a) 4.2 m to (\mu m)
+(b) 3 hours to (\mu s)
+(c) 4.2 m to km
+(d) 173 nm to m
+(e) 173 nm to (\mu m)
+(f) 12 pF (picofarad) to F (farad)
+
+1.4.2 - Identifying nodes
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}
+    \draw (0,0)
+    to[american,v=$12V$] (-2,2) % the left voltage source (12V)
+    to[american,v=$8V$] (2,2) % the right voltage source (8V)
+    to[short,*-*] (0,2);
+    
+\end{circuitikz}
+\end{center}
+\end{figure)
+
+For the circuit above: \\
+(a) Identify and label all nodes \\
+(b) Which of these nodes are extraordinary nodes? \\
+(c) Identify all combinations of 2 or more circuit elements that are connected in series \\
+(d) Identify pairs of circuit elements that are connected in parallel \\
+
+1.4.3 - Identifying nodes in a bridge (diamond) circuit \\
+
+
+For the circuit above: \\
+(a) Identify and label all nodes \\
+(b) Which of these nodes are extraordinary nodes? \\
+(c) Identify all combinations of 2 or more circuit elements that are connected in series \\
+(d) Identify pairs of circuit elements that are connected in parallel \\
+
+1.5.4 - Determine the current i(t) flowing through a certain device if the cumulative charge that has flowed through it up to a time t is given by: \\
+(a) q(t) = 3.6t mC \\
+(b) q(t) = 5 sin(377t) (\nu C) \\
+(c) q(t) = 0.3[1-e^{-0.4t}] pC \\
+(d) q(t) = 0.2t sin(120 \pi t) nC \\
+
+1.5.6 - Determine the net charge \Delta Q that flowed through a resistor over the specified time interval for each of the following currents: \\
+(a) [3t + 6t^3]mA, from (t = 0s) to (t = 4s) \\
+(b) 4sin(40\pi t)cos(40\pi t) (\nu A), from (t = 0s) to (t = 0.05s) \\
+(c) 4e^{-t} - 3e^{-2t}A, from (t = 0s) to t = \infty) \\
+(d) 12e^{-3t}cos(40\pi t)nA, from (t = 0s) to (t = 0.05s)
+
+1.5.10 - The current in (mA) flowing through a wire is given by: \\
+
+i(t) = \begin{cases} 0, & \mbox{for } t\mbox{ < 0,} \\
+6t, & \mbox{for 0 <=} t\mbox{ <= 5s,} \\
+30e^{-0.6(t-5)}, & \mbox{for } t\mbox{ >= 5s} \\
+\end{cases}
+
+(a) Sketch i(t) versus t \\
+
+(b) Sketch q(t) versus t \\
+
+
+1.5.12
+
+% graph
+
+The plot above displays the cumulative amount of charge q(t) that has exited a certain device up to time t. \\
+What is the current at: \\
+(a) t = 2s \\
+
+(b) t = 6 s \\
+
+(c) t = 12 s \\
+
+1.5.13
+
+% graph
+
+The plot above displays the cumulative charge q(t) that has entered a certain device up to time t. \\
+Sketch a plot of the corresponding current i(t)
+
+ADDITIONAL PROBLEM - Given the circuit below, use the fact that the sum of powers associated with all elements in the circuit is zero to find the current I_o
+
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}
+    \draw (-2,0) to[short,*-] (-2,2);
+    \draw (2,0) to[short,*-] (2,2);
+    \draw (-2,-2) to[short,-*] (0,-2);
+    \draw (2,-2) to[short] (0,-2);
+
+    \draw (-2,0)
+    to[V, v=6<\volts>, v_=2<\ampere>]
+    
+
+\end{circuitikz}
+\caption{Circuit}
+\end{center}
+\end{figure}
+
+    
