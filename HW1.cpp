@@ -22,56 +22,73 @@
 
 \begin{enumerate}[label=(\aplh*)]
     \item 4.71 x $10^{-8}$ seconds (s) = 471 $\mu$s \\
-    \item 10.3 x $10^8$ watts (W) \\
-    \item 0.00000000321 amps (A) \\
-    \item 0.1 meters (m) \\
-    \item 8,760,000 volts (V) \\
-    \item 3.16 x $10^{-16}$ hertz (Hz) \\
+    \item 10.3 x $10^8$ watts (W) =  \\
+    \item 0.00000000321 amps (A) = \\
+    \item 0.1 meters (m) = \\
+    \item 8,760,000 volts (V) = \\
+    \item 3.16 x $10^{-16}$ hertz (Hz) = \\
 \end{enumerate}
 
 1.2.3 - Convert: \\
 
 \begin{enumerate}[label=(\aplh*)]
-    \item 16.3 m to mm \\
-    \item 16.3 m to km \\
-    \item 4 x $10^{-6}$ $\mu$F (microfarad) to pF (picofarad) \\
-    \item 2.3 ns to $\mu$s \\
-    \item 3.6 x $10^7V$ to MV \\
-    \item 0.03 mA (milliamp) to $\mu$A \\
+    \item 16.3 m = mm \\
+    \item 16.3 m = km \\
+    \item 4 x $10^{-6}$ $\mu$F (microfarad) = pF (picofarad) \\
+    \item 2.3 ns = $\mu$s \\
+    \item 3.6 x $10^7V$ = MV \\
+    \item 0.03 mA (milliamp) = $\mu$A \\
 \end{enumerate}
 
 1.2.4 - Convert: \\
 
 \begin{enumerate}[label=(\aplh*)]
-    \item 4.2 m to $\mum)
-    \item 3 hours to $\mus)
-    \item 4.2 m to km
-    \item 173 nm to m
-    \item 173 nm to $\mum)
-    \item 12 pF (picofarad) to F (farad)
+    \item 4.2 m = 4.2 x $10^6$ \mu$m)
+    \item 3 hours = 1.08 x $10^{10}$ $\mu$s)
+    \item 4.2 m = 4.2 x $10^-3$ km
+    \item 173 nm = 1.73 x $10^{-7}$ m
+    \item 173 nm = 0.173 $\mu$m)
+    \item 12 pF (picofarad) = 12 x $10^{-12}$ F (farad)
 \end{enumerate}
 
 1.4.2 - Identifying nodes
-% \begin{figure}[h!]
-% \begin{center}
-% \begin{circuitikz}
-%    \draw (0,0)
-%    to[american,v=$12V$] (-2,2) % the left voltage source (12V)
-%    to[american,v=$8V$] (2,2) % the right voltage source (8V)
-%    to[short,*-*] (0,2);
 
-% \end{circuitikz}
-% \end{center}
-% \end{figure)
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}
+    \draw (0,0) to[V,v=$12V$] (0,2)     % I want the voltage source with the + and -
+    to[R=$4\Omega$,*-*] (4,2)
+    to[R=$4\Omega$,*-*] (8,2)
+    \draw (0,0) to[short,-*] (4,0)
+    to[short] (8.0)
+    to[V,v=$8V$] (8,2)      % for both of these V sources, the "-" sign is on the bottom
+    \draw (4,0) to[R=$2\Omega$] (4,2)
+\end{circuitikz}
+\end{center}
+\end{figure}
 
 For the circuit above: \\
-(a) Identify and label all nodes \\
+(a) Identify and label all nodes (all of the dots are nodes, couldn't figure out how to label them though) \\ 
 (b) Which of these nodes are extraordinary nodes? \\
 (c) Identify all combinations of 2 or more circuit elements that are connected in series \\
 (d) Identify pairs of circuit elements that are connected in parallel \\
 
 1.4.3 - Identifying nodes in a bridge (diamond) circuit \\
 
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}
+    \draw (0,0) to[V,v=$4V$] (0,4)
+    to[R=$1\Omega$, *-] (3,4)
+    to[short, -*] (4,4)
+    to[R=$0.3\Omega$, -*] (5,2)
+    to[R=$0.4\Omega$] (4,0)
+    to[short, -*] (0,0)
+    \draw (4,0) to[R=$0.2\Omega$, -*] (3,2)
+    to[R=$0.1\Omega$] (4,4)                              
+\end{circuitikz}
+\end{center}
+\end{figure}
 
 For the circuit above: \\
 (a) Identify and label all nodes \\
@@ -80,21 +97,28 @@ For the circuit above: \\
 (d) Identify pairs of circuit elements that are connected in parallel \\
 
 1.5.4 - Determine the current i(t) flowing through a certain device if the cumulative charge that has flowed through it up to a time t is given by: \\
-
+% i(t) = d q(t) / dt
 \begin{enumerate}[label=(\aplh*)]
-    \item q(t) = 3.6t mC \\
+    \item q(t) = 3.6t mC \\ % to find the i(t), take the derivative of q(t)
+    i(t) = dq/dt = d/dt (3.6t) = 3.6 mA \\                                  
+    
     \item q(t) = 5 sin(377t) $\mu$C \\
+    i(t) = dq/dt = d/dt 5 sin(377t) = 1885cos(377t) $\mu$A \\                                      
+    
     \item q(t) = 0.3[1-e^{-0.4t}] pC \\
-    \item q(t) = 0.2t sin(120 \pi t) nC \\
+    i(t) = dq/dt = d/dt 0.3[1-e^{-0.4t}] = (3*e^(-(2*t)/5))/25 pA \\
+    
+    \item q(t) = 0.2t sin(120 $\pi$t) nC \\
+    i(t) = dq/dt = d/dt 0.2t sin(120 $\pi$t) = sin(120 $\pi$t)/5+24$\pi$t*cos(120$\pi$t) nA \\
 \end{enumerate}
 
 1.5.6 - Determine the net charge \Delta Q that flowed through a resistor over the specified time interval for each of the following currents: \\
 
 \begin{enumerate}[label=(\aplh*)]
     \item [3t + 6t^3]mA, from (t = 0s) to (t = 4s) \\
-    \item 4sin(40\pi t)cos(40\pi t) $\mu$A, from (t = 0s) to (t = 0.05s) \\
+    \item 4sin(40$\pi$t)cos(40$\pi$t) $\mu$A, from (t = 0s) to (t = 0.05s) \\
     \item 4e^{-t} - 3e^{-2t}A, from (t = 0s) to t = \infty) \\
-    \item 12e^{-3t}cos(40\pi t)nA, from (t = 0s) to (t = 0.05s)
+    \item 12e^{-3t}cos(40$\pi$t)nA, from (t = 0s) to (t = 0.05s)
 \end{enumerate}
 
 1.5.10 - The current in (mA) flowing through a wire is given by: \\
