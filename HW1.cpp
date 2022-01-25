@@ -18,26 +18,26 @@
     \item 32 x $10^5$ volts (V) = 320 MV \\
 \end{enumerate}
 
-1.2.2 - Use appropriate and submultiple prefixes to express the following quantities: \\
+1.2.2 - Use appropriate multiple and submultiple prefixes to express the following quantities: \\
 
 \begin{enumerate}[label=(\aplh*)]
-    \item 4.71 x $10^{-8}$ seconds (s) = 471 $\mu$s \\
-    \item 10.3 x $10^8$ watts (W) =  \\
-    \item 0.00000000321 amps (A) = \\
-    \item 0.1 meters (m) = \\
-    \item 8,760,000 volts (V) = \\
-    \item 3.16 x $10^{-16}$ hertz (Hz) = \\
+    \item 4.71 x $10^{-8}$ seconds (s) = 47.1 $\mu$s \\
+    \item 10.3 x $10^8$ watts (W) = 1.03 GW \\
+    \item 0.00000000321 amps (A) = 3,210 x $10^{-12}$ pA \\
+    \item 0.1 meters (m) = 10 cm \\
+    \item 8,760,000 volts (V) = 8.76 MV \\
+    \item 3.16 x $10^{-16}$ hertz (Hz) = 0.316 fH \\
 \end{enumerate}
 
 1.2.3 - Convert: \\
 
 \begin{enumerate}[label=(\aplh*)]
-    \item 16.3 m = mm \\
-    \item 16.3 m = km \\
-    \item 4 x $10^{-6}$ $\mu$F (microfarad) = pF (picofarad) \\
-    \item 2.3 ns = $\mu$s \\
-    \item 3.6 x $10^7V$ = MV \\
-    \item 0.03 mA (milliamp) = $\mu$A \\
+    \item 16.3 m = 16.3 x 1,000 mm = 16,300 mm \\
+    \item 16.3 m = 16.3 / 1,000 = 0.0163 km \\
+    \item 4 x $10^{-6}$ $\mu$F (microfarad) = 4 pF (picofarad) \\
+    \item 2.3 ns = 2.3 x $10^{-9}$ = 0.0023 $\mu$s \\
+    \item 3.6 x $10^7V$ = 36 x $10^6$V = 36 MV \\
+    \item 0.03 mA (milliamp) = 0.03 x $10^{-3}$ = 30 $\mu$A \\
 \end{enumerate}
 
 1.2.4 - Convert: \\
@@ -73,19 +73,22 @@ For the circuit above: \\
 (c) Identify all combinations of 2 or more circuit elements that are connected in series \\
 (d) Identify pairs of circuit elements that are connected in parallel \\
 
-1.4.3 - Identifying nodes in a bridge (diamond) circuit \\
+1.4.4 - Identifying nodes in a bridge (diamond) circuit \\
 
 \begin{figure}[h!]
 \begin{center}
 \begin{circuitikz}
-    \draw (0,0) to[V,v=$4V$] (0,4)
-    to[R=$1\Omega$, *-] (3,4)
+    \draw(0,0) to[short] (0,2)
+    to[V,v=$12V$, -*] (0,4)
+    to[R=$25\Omega$] (3,4)
     to[short, -*] (4,4)
-    to[R=$0.3\Omega$, -*] (5,2)
-    to[R=$0.4\Omega$] (4,0)
-    to[short, -*] (0,0)
-    \draw (4,0) to[R=$0.2\Omega$, -*] (3,2)
-    to[R=$0.1\Omega$] (4,4)                              
+    to[R=$10\Omega$, -*] (2,5)
+    to[R=$20\Omega$] (4,0)
+    to[short, -*] (3,0)
+    to[R=$15\Omega$] (0,0)
+    \draw(0,2) to[R=$60\Omega$, -*] (3,2)
+    to[R=$40\Omega$] (4,4)  
+    \draw(3,2) to[R=$30\Omega] (4,0);                              
 \end{circuitikz}
 \end{center}
 \end{figure}
@@ -96,20 +99,52 @@ For the circuit above: \\
 (c) Identify all combinations of 2 or more circuit elements that are connected in series \\
 (d) Identify pairs of circuit elements that are connected in parallel \\
 
+1.4.6 - Identifying nodes in a bridge (diamond) circuit \\
+
+\begin{figure}[h!]
+\begin{center}
+\begin{circuitikz}
+    \draw(0,0) to[V,v=$12V$] (0,2)
+    to[R=$10\Omega$,*-*] (2,2)
+    to[R=$31\Omega$,-*] (4,2)
+    to[R=$8\Omega, -*] (6,2)    
+    to[R=$6\Omega$] (6,0)
+    to[short,*-] (0,0);
+    \draw(2,0) to[R=$4\Omega$] (2,2)
+    to[short,-*] (4,0)
+    to[R=$16\Omega$] (4,2)
+\end{circuitikz}
+\end{center}
+\end{figure}                                  
+
+For the circuit above: \\
+(a) Identify and label all nodes \\
+(b) Which of these nodes are extraordinary nodes? \\
+(c) Identify all combinations of 2 or more circuit elements that are connected in series \\
+(d) Identify pairs of circuit elements that are connected in parallel \\
+
+1.5.2 - A certain cross section lies in the x–y plane. 3 × $10^{20}$ electrons go through the cross section in the z direction in 4 seconds. Simultaneously a 6A
+current flows through the same cross section in the negative z direction, what is the magnitude and direction of the current flowing through the cross section?  \\
+(3 x $10^{20}$) + (1.5 x $10^{20}$) = 4.5 x $10^{20}$ (the total amount of electrons and protons \\
+1.6 x $10^{-19}$ C = magnitude of charge for a single proton/electron \\
+(1.6 x $10^{-19}$ C) x (4.5 x $10^{20}$) = 72.1 C \\
+Current = I = dq/dt = 72.1/4 \\
+Current = 18.03 A in the negative z direction (current flows opposite the electron flow)
+
 1.5.4 - Determine the current i(t) flowing through a certain device if the cumulative charge that has flowed through it up to a time t is given by: \\
 % i(t) = d q(t) / dt
 \begin{enumerate}[label=(\aplh*)]
-    \item q(t) = 3.6t mC \\ % to find the i(t), take the derivative of q(t)
-    i(t) = dq/dt = d/dt (3.6t) = 3.6 mA \\                                  
+    \item q(t) = $-0.45t^3$ mC \\ % to find the i(t), take the derivative of q(t)
+    i(t) = dq/dt = d/dt ($-0.45t^2$) = $-1.35t^2\mu$A \\                                  
     
-    \item q(t) = 5 sin(377t) $\mu$C \\
-    i(t) = dq/dt = d/dt 5 sin(377t) = 1885cos(377t) $\mu$A \\                                      
+    \item q(t) = 12sin^2(800$\pi$t) $\mu$C \\
+    i(t) = dq/dt = d/dt 5 sin(377t) = 19200{\pi}\cos\left(800{\pi}t\right)\sin\left(800{\pi}t\right) $\mu$A \\                                      
     
-    \item q(t) = 0.3[1-e^{-0.4t}] pC \\
-    i(t) = dq/dt = d/dt 0.3[1-e^{-0.4t}] = (3*e^(-(2*t)/5))/25 pA \\
+    \item q(t) = −3.2 sin(377t)cos(377t) pC \\
+    i(t) = dq/dt = d/dt 0.3[1-e^{-0.4t}] = \dfrac{6032\sin^2\left(377t\right)}{5}-\dfrac{6032\cos^2\left(377t\right)}{5} pA \\
     
-    \item q(t) = 0.2t sin(120 $\pi$t) nC \\
-    i(t) = dq/dt = d/dt 0.2t sin(120 $\pi$t) = sin(120 $\pi$t)/5+24$\pi$t*cos(120$\pi$t) nA \\
+    \item q(t) = 1.7t[1−$e^{-1.2t}$] nC \\
+    i(t) = dq/dt = d/dt 1.7t[1−$e^{-1.2t}$] = \dfrac{51t\mathrm{e}^{-\frac{6t}{5}}}{25}+\dfrac{17\left(1-\mathrm{e}^{-\frac{6t}{5}}\right)}{10} nA \\
 \end{enumerate}
 
 1.5.6 - Determine the net charge \Delta Q that flowed through a resistor over the specified time interval for each of the following currents: \\
