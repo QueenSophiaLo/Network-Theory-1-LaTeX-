@@ -1,0 +1,131 @@
+\begin{document}
+
+
+\begin{titlepage}
+\thispagestyle{fancy} %Makes page fancy
+\rhead{}
+\chead{}
+\lhead{ECGR 2155-Section L02} %For the left header. Change this if needed
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\renewcommand{\headrulewidth}{0pt} %Removes horizontal line on the header.
+    \begin{center}
+        \vspace*{1cm}
+
+
+       \Large\textbf{University of North Carolina at Charlotte \\[1pt]
+	Department of Electrical and Computer Engineering} \\[2pt]
+\textit{Laboratory Experiment Number\#1 Instrumentation Tutorial } \\[5pt]
+    \vfill
+    \vfill
+    \vfill
+}
+
+\noindent\rule{15cm}{0.4pt}
+\vfill
+        \vspace{1.5cm}
+        \textit{Laboratory Experiment Report\#1} \\
+		Author: Sophia, Godfrey\\	 %Change this part
+		Lab Partner: Timothy, Niven	\\ %Change this part
+		Date: 02/11/2022 \\
+
+        \vspace{1cm}
+
+
+
+        \vfill
+		\vfill
+		\vfill
+		\vfill
+
+       \large This report was submitted in compliance with UNCC POLICY 407\\
+THE CODE OF STUDENT ACADEMIC INTEGRITY, Revised November 6, 2014
+(http://legal.uncc.edu/policies/up-407) (SG)
+        \vspace{0.8cm}
+
+
+
+
+
+    \end{center}
+\end{titlepage}
+
+
+\section{Objectives}
+There are many instruments in the lab to be used by students in the ECE undergraduate program.
+Students are required to know how to build circuits from circuit diagrams and use the instruments
+in the lab to be able to measure different circuit elements. During the first lab session of the
+semester, it is imperative to acclimate students to the process of using the different lab
+instruments. The first laboratory session explored the operation and use of common lab instruments,
+e.g., the dc power supply, multimeter, signal generator and oscilloscope. The purpose of Experiment
+1 is to learn about and use the equipment in the lab with the intent of using it for future labs.
+
+\section{Equipment List}
+\begin{itemize}
+    \item Banana Leads
+    \item $1k\Omega$ Resistor - mounted on a U channel
+    \item Agilent U8031A DC Power Supply
+    \item Agilent 34461A Digital Multimeter
+    \item Agilent 33500B Arbitrary Function Generator
+    \item Agilent DSO-X-2002A Digital Storage Oscilloscope
+\end{itemize}
+
+\section{Relevant Theory/Background Information}
+Multiple instruments are used during the experiment. The DC power supply supplies voltage values
+set by the experimenter to the circuit board. The digital multimeter measures three basic electrical
+quantities; current, resistance, and voltage (AC and DC). The arbitrary function generator generates
+a sine wave- arbitrary function generators can also produce eight other waveforms; square, ramp,
+line, pulse, triangle, noise, PRBS, and DC. An oscilloscope graphically displays varying voltage
+signals and shows how voltage changes over time.
+Ohm’s law is a basic circuit theory concept. According to Ohm’s law $V=IR$ where $V$ is voltage,
+$I$ is current, and $R$ is the resistance value. Ohm’s law is applied during this experiment.
+According to Ohm’s law, no voltage can appear across a short circuit- as a connection between two
+nodes, a short circuit provides no resistance. As the value for resistance is equal to 0, the equation
+is as follows $V=I*R$ and thus there is zero voltage. Ohm’s law can also explain the directly
+proportional relationship between voltage and current.
+
+\section{Experimental Data/Analysis}
+A DC power supply is used to set up a current limit of 0.3A, the current limit protects the lab equipment
+in case of unintentional short circuits. A digital multimeter (DMM) is then used to measure different
+values of a circuit; voltage, resistance, and current. Although the values of the circuit were predetermined
+and preset, the measured values differed (refer to table 1 for more details). The preset values of the
+experiment saw the resistance at $1k\Omega$, the voltage at $10V$, and the current at $0.3A$. \\
+The measured values were as follows: \\
+$\frac{9.99826V}{0.00991201A} \approx 1008.702\Omega \approx 1k\Omega \approx  0.986k\Omega$ \\
+Where… \\
+The calculated value = $1008.702\Omega$ \\
+The actual value = $1k\Omega$ \\
+The measured value = $0.986k\Omega$ \\
+The oscilloscope is then used to measure a specified voltage and the function generator is used to generate a specified waveform.
+
+\section{Conclusion}
+During the experiment, the values of the resistors recorded in the post lab differed from the measured values during the experiment.
+Possible deviations in measurements can be attributed to any imperfections in the voltage being provided by the power supply,
+the make of the resistor, and the multimeter. The resistor being used in the lab ($1k\Omega$) already had a given tolerance level of
+$\pm5$ indicated by the gold band. Some of the power given by the power supply could have been dissipated through the connections to
+the circuit, explaining why the measured resistance values were always slightly less than the given values. \\
+To conclude, experiement one was an introduction to the course acclimating students to the instruments used during the lab.
+Through measuring different circuit elements, students can see the variances between measured and given values.
+
+\section{Tables}
+\begin{center}
+\caption{Table 1:\label{long}}\\
+\begin{tabular}{ |c|c|c| }
+\hline
+Nominal Resistance & $1k\Omega$ \\
+\hline
+Measured Resistance & $0.986k\Omega$ \\
+\hline
+Measured Voltage across the Resistor & $9.99826V$ \\
+\hline
+Measured Current through the Resistor & $9.91201MA$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{References}
+Experiment 1 - Instrumentation Tutorial. University of North Carolina at Charlotte, Department of Electrical and Computer Engineering.  \\
+https://ece.charlotte.edu/sites/ece.charlotte.edu/files/media/ecgr2155-experiment-1-instrumentation-tutorial.pdf.
+
+\end{document}
